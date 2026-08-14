@@ -1,0 +1,7 @@
+.DS_Store
+.report/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.font-build/

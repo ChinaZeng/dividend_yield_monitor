@@ -1,0 +1,98 @@
+name: Daily A-Share Dividend Yield Monitor
+
+on:
+  schedule:
+    # UTC 08:30 = Asia/Shanghai 16:30
+    - cron: "30 8 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dividend-yield-monitor-${{ github.repository }}
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Prepare snapshot and report
+        id: prepare
+        env:
+          TZ: Asia/Shanghai
+        run: python monitor.py prepare --output-dir .report
+
+      - name: Read run metadata
+        id: meta
+        if: ${{ always() && steps.prepare.outcome == 'success' }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          manifest = json.loads(Path(".report/manifest.json").read_text(encoding="utf-8"))
+          status = manifest.get("status", "failed")
+          report_date = manifest.get("trade_date") or manifest.get("generated_at", "unknown")[:10]
+          with Path(os.environ["GITHUB_OUTPUT"]).open("a", encoding="utf-8") as output:
+              output.write(f"status={status}\n")
+              output.write(f"skipped={'true' if status == 'skipped_non_trading_day' else 'false'}\n")
+              output.write(f"snapshot_path={manifest.get('snapshot_path') or ''}\n")
+              output.write(f"report_generated={'true' if manifest.get('image_path') else 'false'}\n")
+              output.write(f"artifact_name=dividend-yield-{report_date}\n")
+          PY
+
+      - name: Commit daily JSON snapshot
+        if: ${{ always() && steps.meta.outputs.snapshot_path != '' }}
+        env:
+          SNAPSHOT_PATH: ${{ steps.meta.outputs.snapshot_path }}
+          TRADE_DATE: ${{ steps.meta.outputs.artifact_name }}
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -- "$SNAPSHOT_PATH"
+          if git diff --cached --quiet; then
+            echo "Daily snapshot is unchanged."
+            exit 0
+          fi
+          git commit -m "data: update $TRADE_DATE [skip ci]"
+          git push
+
+      - name: Upload report artifact
+        if: ${{ always() && steps.meta.outputs.report_generated == 'true' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.meta.outputs.artifact_name }}
+          path: |
+            .report/manifest.json
+            .report/*.md
+            .report/*.png
+          retention-days: 30
+          if-no-files-found: error
+
+      - name: Send QQ email
+        if: ${{ always() && steps.meta.outputs.skipped == 'false' && steps.meta.outputs.report_generated == 'true' }}
+        env:
+          QQ_EMAIL_ADDRESS: ${{ secrets.QQ_EMAIL_ADDRESS }}
+          QQ_EMAIL_AUTH_CODE: ${{ secrets.QQ_EMAIL_AUTH_CODE }}
+          TZ: Asia/Shanghai
+        run: python monitor.py send --manifest .report/manifest.json
+
+      - name: Check data health
+        if: ${{ always() && steps.prepare.outcome == 'success' }}
+        run: python monitor.py check --manifest .report/manifest.json

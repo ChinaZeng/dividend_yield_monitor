@@ -1,0 +1,80 @@
+{
+  "timezone": "Asia/Shanghai",
+  "stocks": [
+    {
+      "code": "601288.SH",
+      "name": "农业银行",
+      "buy_levels": [
+        {"yield_threshold_pct": 5.0, "target_position_pct": 25},
+        {"yield_threshold_pct": 5.5, "target_position_pct": 60},
+        {"yield_threshold_pct": 6.0, "target_position_pct": 100}
+      ],
+      "sell_levels": [
+        {"yield_threshold_pct": 3.9, "target_position_pct": 70},
+        {"yield_threshold_pct": 3.6, "target_position_pct": 35},
+        {"yield_threshold_pct": 3.3, "target_position_pct": 0}
+      ]
+    },
+    {
+      "code": "601398.SH",
+      "name": "工商银行",
+      "buy_levels": [
+        {"yield_threshold_pct": 5.25, "target_position_pct": 25},
+        {"yield_threshold_pct": 5.75, "target_position_pct": 60},
+        {"yield_threshold_pct": 6.25, "target_position_pct": 100}
+      ],
+      "sell_levels": [
+        {"yield_threshold_pct": 4.7, "target_position_pct": 70},
+        {"yield_threshold_pct": 4.15, "target_position_pct": 35},
+        {"yield_threshold_pct": 4.0, "target_position_pct": 0}
+      ]
+    },
+    {
+      "code": "600036.SH",
+      "name": "招商银行",
+      "buy_levels": [
+        {"yield_threshold_pct": 5.0, "target_position_pct": 25},
+        {"yield_threshold_pct": 5.5, "target_position_pct": 60},
+        {"yield_threshold_pct": 6.0, "target_position_pct": 100}
+      ],
+      "sell_levels": [
+        {"yield_threshold_pct": 4.85, "target_position_pct": 70},
+        {"yield_threshold_pct": 4.7, "target_position_pct": 35},
+        {"yield_threshold_pct": 4.5, "target_position_pct": 0}
+      ]
+    },
+    {
+      "code": "600900.SH",
+      "name": "长江电力",
+      "buy_levels": [
+        {"yield_threshold_pct": 3.4, "target_position_pct": 25},
+        {"yield_threshold_pct": 3.6, "target_position_pct": 60},
+        {"yield_threshold_pct": 3.8, "target_position_pct": 100}
+      ],
+      "sell_levels": [
+        {"yield_threshold_pct": 3.3, "target_position_pct": 70},
+        {"yield_threshold_pct": 3.0, "target_position_pct": 35},
+        {"yield_threshold_pct": 2.8, "target_position_pct": 0}
+      ]
+    },
+    {
+      "code": "600941.SH",
+      "name": "中国移动",
+      "buy_levels": [
+        {"yield_threshold_pct": 4.75, "target_position_pct": 25},
+        {"yield_threshold_pct": 5.0, "target_position_pct": 60},
+        {"yield_threshold_pct": 5.25, "target_position_pct": 100}
+      ],
+      "sell_levels": [
+        {"yield_threshold_pct": 4.18, "target_position_pct": 70},
+        {"yield_threshold_pct": 4.1, "target_position_pct": 35},
+        {"yield_threshold_pct": 4.0, "target_position_pct": 0}
+      ]
+    }
+  ],
+  "notifier": {
+    "type": "qqmail",
+    "address_env": "QQ_EMAIL_ADDRESS",
+    "auth_code_env": "QQ_EMAIL_AUTH_CODE"
+  }
+}
