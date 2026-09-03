@@ -1,0 +1,496 @@
+{
+  "schema_version": 2,
+  "status": "ok",
+  "trade_date": "2026-09-03",
+  "report_date": "2026-09-03",
+  "generated_at": "2026-09-03T20:57:05.678079+08:00",
+  "market_probe": {
+    "code": "000001.SH",
+    "name": "上证指数",
+    "price": 3942.09,
+    "quote_time": "2026-09-03T16:14:01+08:00"
+  },
+  "sources": {
+    "quotes": "腾讯行情 qt.gtimg.cn",
+    "dividends": "东方财富分红配送详情（AKShare stock_fhps_detail_em）"
+  },
+  "stocks": [
+    {
+      "code": "601288.SH",
+      "name": "农业银行",
+      "source_name": "农业银行",
+      "quote_time": "2026-09-03T16:14:32+08:00",
+      "close": 6.89,
+      "previous_close": 7.06,
+      "ttm_window": {
+        "start_exclusive": "2025-09-03",
+        "end_inclusive": "2026-09-03"
+      },
+      "dividends": [
+        {
+          "report_period": "2025-06-30",
+          "ex_date": "2025-12-15",
+          "description": "10派1.195元(含税,扣税后1.0755元)",
+          "cash_per_10_shares_pre_tax": 1.195,
+          "cash_per_share_pre_tax_raw": 0.1195,
+          "share_adjustment_factor": 1.0,
+          "cash_per_share_pre_tax_adjusted": 0.1195
+        },
+        {
+          "report_period": "2025-12-31",
+          "ex_date": "2026-05-13",
+          "description": "10派1.30元(含税,扣税后1.17元)",
+          "cash_per_10_shares_pre_tax": 1.3,
+          "cash_per_share_pre_tax_raw": 0.13,
+          "share_adjustment_factor": 1.0,
+          "cash_per_share_pre_tax_adjusted": 0.13
+        }
+      ],
+      "ttm_dividend_per_share_pre_tax": 0.2495,
+      "dividend_yield_pct": 3.62119,
+      "buy_levels": [
+        {
+          "level": 1,
+          "yield_threshold_pct": 5.0,
+          "target_position_pct": 25.0,
+          "target_price": 4.99
+        },
+        {
+          "level": 2,
+          "yield_threshold_pct": 5.5,
+          "target_position_pct": 60.0,
+          "target_price": 4.5364
+        },
+        {
+          "level": 3,
+          "yield_threshold_pct": 6.0,
+          "target_position_pct": 100.0,
+          "target_price": 4.1583
+        }
+      ],
+      "sell_levels": [
+        {
+          "level": 1,
+          "yield_threshold_pct": 3.9,
+          "target_position_pct": 70.0,
+          "target_price": 6.3974
+        },
+        {
+          "level": 2,
+          "yield_threshold_pct": 3.6,
+          "target_position_pct": 35.0,
+          "target_price": 6.9306
+        },
+        {
+          "level": 3,
+          "yield_threshold_pct": 3.3,
+          "target_position_pct": 0.0,
+          "target_price": 7.5606
+        }
+      ],
+      "signal_side": "sell",
+      "signal_level": 1,
+      "signal_key": "sell_1",
+      "signal_threshold_pct": 3.9,
+      "signal_target_position_pct": 70.0,
+      "signal_target_price": 6.3974,
+      "model_position_pct": 35.0,
+      "position_action": "hold",
+      "signal_event": "crossed",
+      "previous_signal_key": "sell_2",
+      "buy_yield_threshold_pct": 5.0,
+      "sell_yield_threshold_pct": 3.3,
+      "buy_target_price": 4.99,
+      "sell_target_price": 7.5606,
+      "buy_yield_gap_pp": -1.37881,
+      "sell_yield_gap_pp": -0.27881,
+      "yield_threshold_pct": 5.0,
+      "target_price": 4.99,
+      "yield_gap_pp": -1.37881,
+      "recommendation": "sell_candidate",
+      "error": null,
+      "previous_trade_date": "2026-09-02",
+      "previous_model_position_pct": 35.0
+    },
+    {
+      "code": "601398.SH",
+      "name": "工商银行",
+      "source_name": "工商银行",
+      "quote_time": "2026-09-03T16:14:43+08:00",
+      "close": 8.1,
+      "previous_close": 8.22,
+      "ttm_window": {
+        "start_exclusive": "2025-09-03",
+        "end_inclusive": "2026-09-03"
+      },
+      "dividends": [
+        {
+          "report_period": "2025-06-30",
+          "ex_date": "2025-12-15",
+          "description": "10派1.414元(含税,扣税后1.2726元)",
+          "cash_per_10_shares_pre_tax": 1.414,
+          "cash_per_share_pre_tax_raw": 0.1414,
+          "share_adjustment_factor": 1.0,
+          "cash_per_share_pre_tax_adjusted": 0.1414
+        },
+        {
+          "report_period": "2025-12-31",
+          "ex_date": "2026-05-13",
+          "description": "10派1.689元(含税,扣税后1.5201元)",
+          "cash_per_10_shares_pre_tax": 1.689,
+          "cash_per_share_pre_tax_raw": 0.1689,
+          "share_adjustment_factor": 1.0,
+          "cash_per_share_pre_tax_adjusted": 0.1689
+        }
+      ],
+      "ttm_dividend_per_share_pre_tax": 0.3103,
+      "dividend_yield_pct": 3.830864,
+      "buy_levels": [
+        {
+          "level": 1,
+          "yield_threshold_pct": 5.25,
+          "target_position_pct": 25.0,
+          "target_price": 5.9105
+        },
+        {
+          "level": 2,
+          "yield_threshold_pct": 5.75,
+          "target_position_pct": 60.0,
+          "target_price": 5.3965
+        },
+        {
+          "level": 3,
+          "yield_threshold_pct": 6.25,
+          "target_position_pct": 100.0,
+          "target_price": 4.9648
+        }
+      ],
+      "sell_levels": [
+        {
+          "level": 1,
+          "yield_threshold_pct": 4.7,
+          "target_position_pct": 70.0,
+          "target_price": 6.6021
+        },
+        {
+          "level": 2,
+          "yield_threshold_pct": 4.15,
+          "target_position_pct": 35.0,
+          "target_price": 7.4771
+        },
+        {
+          "level": 3,
+          "yield_threshold_pct": 4.0,
+          "target_position_pct": 0.0,
+          "target_price": 7.7575
+        }
+      ],
+      "signal_side": "sell",
+      "signal_level": 3,
+      "signal_key": "sell_3",
+      "signal_threshold_pct": 4.0,
+      "signal_target_position_pct": 0.0,
+      "signal_target_price": 7.7575,
+      "model_position_pct": 0.0,
+      "position_action": "hold",
+      "signal_event": "maintain",
+      "previous_signal_key": "sell_3",
+      "buy_yield_threshold_pct": 5.25,
+      "sell_yield_threshold_pct": 4.0,
+      "buy_target_price": 5.9105,
+      "sell_target_price": 7.7575,
+      "buy_yield_gap_pp": -1.419136,
+      "sell_yield_gap_pp": -0.869136,
+      "yield_threshold_pct": 5.25,
+      "target_price": 5.9105,
+      "yield_gap_pp": -1.419136,
+      "recommendation": "sell_candidate",
+      "error": null,
+      "previous_trade_date": "2026-09-02",
+      "previous_model_position_pct": 0.0
+    },
+    {
+      "code": "600036.SH",
+      "name": "招商银行",
+      "source_name": "招商银行",
+      "quote_time": "2026-09-03T16:14:58+08:00",
+      "close": 41.07,
+      "previous_close": 40.87,
+      "ttm_window": {
+        "start_exclusive": "2025-09-03",
+        "end_inclusive": "2026-09-03"
+      },
+      "dividends": [
+        {
+          "report_period": "2025-06-30",
+          "ex_date": "2026-01-16",
+          "description": "10派10.13元(含税,扣税后9.117元)",
+          "cash_per_10_shares_pre_tax": 10.13,
+          "cash_per_share_pre_tax_raw": 1.013,
+          "share_adjustment_factor": 1.0,
+          "cash_per_share_pre_tax_adjusted": 1.013
+        },
+        {
+          "report_period": "2025-12-31",
+          "ex_date": "2026-07-10",
+          "description": "10派10.03元(含税)",
+          "cash_per_10_shares_pre_tax": 10.03,
+          "cash_per_share_pre_tax_raw": 1.003,
+          "share_adjustment_factor": 1.0,
+          "cash_per_share_pre_tax_adjusted": 1.003
+        }
+      ],
+      "ttm_dividend_per_share_pre_tax": 2.016,
+      "dividend_yield_pct": 4.908692,
+      "buy_levels": [
+        {
+          "level": 1,
+          "yield_threshold_pct": 5.0,
+          "target_position_pct": 25.0,
+          "target_price": 40.32
+        },
+        {
+          "level": 2,
+          "yield_threshold_pct": 5.5,
+          "target_position_pct": 60.0,
+          "target_price": 36.6545
+        },
+        {
+          "level": 3,
+          "yield_threshold_pct": 6.0,
+          "target_position_pct": 100.0,
+          "target_price": 33.6
+        }
+      ],
+      "sell_levels": [
+        {
+          "level": 1,
+          "yield_threshold_pct": 4.85,
+          "target_position_pct": 70.0,
+          "target_price": 41.567
+        },
+        {
+          "level": 2,
+          "yield_threshold_pct": 4.7,
+          "target_position_pct": 35.0,
+          "target_price": 42.8936
+        },
+        {
+          "level": 3,
+          "yield_threshold_pct": 4.5,
+          "target_position_pct": 0.0,
+          "target_price": 44.8
+        }
+      ],
+      "signal_side": "watch",
+      "signal_level": null,
+      "signal_key": "watch",
+      "signal_threshold_pct": null,
+      "signal_target_position_pct": null,
+      "signal_target_price": null,
+      "model_position_pct": 25.0,
+      "position_action": "hold",
+      "signal_event": "maintain",
+      "previous_signal_key": "watch",
+      "buy_yield_threshold_pct": 5.0,
+      "sell_yield_threshold_pct": 4.5,
+      "buy_target_price": 40.32,
+      "sell_target_price": 44.8,
+      "buy_yield_gap_pp": -0.091308,
+      "sell_yield_gap_pp": 0.058692,
+      "yield_threshold_pct": 5.0,
+      "target_price": 40.32,
+      "yield_gap_pp": -0.091308,
+      "recommendation": "watch",
+      "error": null,
+      "previous_trade_date": "2026-09-02",
+      "previous_model_position_pct": 25.0
+    },
+    {
+      "code": "600900.SH",
+      "name": "长江电力",
+      "source_name": "长江电力",
+      "quote_time": "2026-09-03T16:14:41+08:00",
+      "close": 28.44,
+      "previous_close": 28.72,
+      "ttm_window": {
+        "start_exclusive": "2025-09-03",
+        "end_inclusive": "2026-09-03"
+      },
+      "dividends": [
+        {
+          "report_period": "2025-09-30",
+          "ex_date": "2026-02-12",
+          "description": "10派2.10元(含税,扣税后1.89元)",
+          "cash_per_10_shares_pre_tax": 2.1,
+          "cash_per_share_pre_tax_raw": 0.21,
+          "share_adjustment_factor": 1.0,
+          "cash_per_share_pre_tax_adjusted": 0.21
+        },
+        {
+          "report_period": "2025-12-31",
+          "ex_date": "2026-07-17",
+          "description": "10派7.90元(含税,扣税后7.11元)",
+          "cash_per_10_shares_pre_tax": 7.9,
+          "cash_per_share_pre_tax_raw": 0.79,
+          "share_adjustment_factor": 1.0,
+          "cash_per_share_pre_tax_adjusted": 0.79
+        }
+      ],
+      "ttm_dividend_per_share_pre_tax": 1.0,
+      "dividend_yield_pct": 3.516174,
+      "buy_levels": [
+        {
+          "level": 1,
+          "yield_threshold_pct": 3.4,
+          "target_position_pct": 25.0,
+          "target_price": 29.4118
+        },
+        {
+          "level": 2,
+          "yield_threshold_pct": 3.6,
+          "target_position_pct": 60.0,
+          "target_price": 27.7778
+        },
+        {
+          "level": 3,
+          "yield_threshold_pct": 3.8,
+          "target_position_pct": 100.0,
+          "target_price": 26.3158
+        }
+      ],
+      "sell_levels": [
+        {
+          "level": 1,
+          "yield_threshold_pct": 3.3,
+          "target_position_pct": 70.0,
+          "target_price": 30.303
+        },
+        {
+          "level": 2,
+          "yield_threshold_pct": 3.0,
+          "target_position_pct": 35.0,
+          "target_price": 33.3333
+        },
+        {
+          "level": 3,
+          "yield_threshold_pct": 2.8,
+          "target_position_pct": 0.0,
+          "target_price": 35.7143
+        }
+      ],
+      "signal_side": "buy",
+      "signal_level": 1,
+      "signal_key": "buy_1",
+      "signal_threshold_pct": 3.4,
+      "signal_target_position_pct": 25.0,
+      "signal_target_price": 29.4118,
+      "model_position_pct": 25.0,
+      "position_action": "hold",
+      "signal_event": "maintain",
+      "previous_signal_key": "buy_1",
+      "buy_yield_threshold_pct": 3.4,
+      "sell_yield_threshold_pct": 2.8,
+      "buy_target_price": 29.4118,
+      "sell_target_price": 35.7143,
+      "buy_yield_gap_pp": 0.116174,
+      "sell_yield_gap_pp": 0.216174,
+      "yield_threshold_pct": 3.4,
+      "target_price": 29.4118,
+      "yield_gap_pp": 0.116174,
+      "recommendation": "buy_candidate",
+      "error": null,
+      "previous_trade_date": "2026-09-02",
+      "previous_model_position_pct": 25.0
+    },
+    {
+      "code": "600941.SH",
+      "name": "中国移动",
+      "source_name": "中国移动",
+      "quote_time": "2026-09-03T16:14:51+08:00",
+      "close": 100.53,
+      "previous_close": 100.8,
+      "ttm_window": {
+        "start_exclusive": "2025-09-03",
+        "end_inclusive": "2026-09-03"
+      },
+      "dividends": [
+        {
+          "report_period": "2025-12-31",
+          "ex_date": "2026-06-05",
+          "description": "10派22.012元(含税,扣税后19.8108元)",
+          "cash_per_10_shares_pre_tax": 22.012,
+          "cash_per_share_pre_tax_raw": 2.2012,
+          "share_adjustment_factor": 1.0,
+          "cash_per_share_pre_tax_adjusted": 2.2012
+        }
+      ],
+      "ttm_dividend_per_share_pre_tax": 2.2012,
+      "dividend_yield_pct": 2.189595,
+      "buy_levels": [
+        {
+          "level": 1,
+          "yield_threshold_pct": 4.75,
+          "target_position_pct": 25.0,
+          "target_price": 46.3411
+        },
+        {
+          "level": 2,
+          "yield_threshold_pct": 5.0,
+          "target_position_pct": 60.0,
+          "target_price": 44.024
+        },
+        {
+          "level": 3,
+          "yield_threshold_pct": 5.25,
+          "target_position_pct": 100.0,
+          "target_price": 41.9276
+        }
+      ],
+      "sell_levels": [
+        {
+          "level": 1,
+          "yield_threshold_pct": 4.18,
+          "target_position_pct": 70.0,
+          "target_price": 52.6603
+        },
+        {
+          "level": 2,
+          "yield_threshold_pct": 4.1,
+          "target_position_pct": 35.0,
+          "target_price": 53.6878
+        },
+        {
+          "level": 3,
+          "yield_threshold_pct": 4.0,
+          "target_position_pct": 0.0,
+          "target_price": 55.03
+        }
+      ],
+      "signal_side": "sell",
+      "signal_level": 3,
+      "signal_key": "sell_3",
+      "signal_threshold_pct": 4.0,
+      "signal_target_position_pct": 0.0,
+      "signal_target_price": 55.03,
+      "model_position_pct": 0.0,
+      "position_action": "hold",
+      "signal_event": "maintain",
+      "previous_signal_key": "sell_3",
+      "buy_yield_threshold_pct": 4.75,
+      "sell_yield_threshold_pct": 4.0,
+      "buy_target_price": 46.3411,
+      "sell_target_price": 55.03,
+      "buy_yield_gap_pp": -2.560405,
+      "sell_yield_gap_pp": -1.990405,
+      "yield_threshold_pct": 4.75,
+      "target_price": 46.3411,
+      "yield_gap_pp": -2.560405,
+      "recommendation": "sell_candidate",
+      "error": null,
+      "previous_trade_date": "2026-09-02",
+      "previous_model_position_pct": 0.0
+    }
+  ],
+  "error": null
+}
